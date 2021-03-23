@@ -165,6 +165,7 @@ class CondaKernelSpecManager(KernelSpecManager):
                     continue
             if env_path == base_prefix:
                 env_name = 'root'
+                continue #base env already listed by launcher
             elif env_path.startswith(build_prefix):
                 # Skip the conda-bld directory entirely
                 continue
